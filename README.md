@@ -1,7 +1,9 @@
 # Northwestern Unofficial Beamer Template
 
 Created by: Alvin Lumbanraja 
+
 Permission: Creative Commons (not intended for commercial reuse)
+
 Disclaimer: This is solely intended for scientific dissemination purpose and shall not be construed as officially sanctioned by Northwestern. All rights pertaining to the use of graphic elements, such as logo, are reserved by Northwestern University 
 
 ## How To
