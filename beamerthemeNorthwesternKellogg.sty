@@ -1,0 +1,91 @@
+
+\ProvidesPackage{beamerthemeNorthwesternKellogg}
+
+\RequirePackage{silence}
+\WarningsOff[mathdesign/mdbch]
+
+\RequirePackage{etoolbox}
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+\setbeamertemplate{headline}{
+\begin{beamercolorbox}{section in head/foot} \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+\end{beamercolorbox}}
+
+% \RequirePackage[T1]{fontenc}
+% \RequirePackage[charter,expert]{mathdesign}
+% \RequirePackage[scaled=.96,oldstyle]{XCharter}
+% \RequirePackage[default,scale=0.96,osfigures]{opensans}
+\RequirePackage{fontspec}
+\RequirePackage{newpxmath}
+\setromanfont{Source Serif Pro}
+\setsansfont{Roboto}
+
+\RequirePackage{tikz}
+\RequirePackage{parskip}
+
+
+\definecolor{Purple}{HTML}{4E2A84}
+\definecolor{Blue}{HTML}{005DA5}
+\definecolor{Red}{HTML}{E94F3D}
+\definecolor{White}{HTML}{FFFFFF}
+\definecolor{Grey1}{HTML}{EAEAEA}
+\definecolor{Grey2}{HTML}{CACACA}
+\definecolor{DarkGrey}{HTML}{4A4A4A}
+
+\setbeamertemplate{title page}[default][left]
+\setbeamerfont{title}{family=\rmfamily,size=\huge}
+\setbeamerfont{subtitle}{family=\rmfamily,size=\large}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\small,shape=\itshape}
+\setbeamerfont{date}{size=\small}
+
+
+
+
+\setbeamersize{text margin left=3em, text margin right=3em}
+\linespread{1.15}
+\setlength{\parskip}{\smallskipamount} 
+
+\setbeamertemplate{frametitle}{\vskip 0.025\paperheight\insertframetitle\vskip 0.025\paperheight} 
+
+\setbeamerfont{frametitle}{family=\rmfamily,series=\mdseries,size=\Large}
+\setbeamerfont{block title}{family=\rmfamily,size=\large}
+\setbeamercolor{titlelike}{fg=Purple}
+\setbeamercolor{normal text}{fg=DarkGrey}
+\setbeamercolor{structure}{fg=DarkGrey}
+\setbeamercolor{block title}{fg=Purple}
+\setbeamercolor{block title}{fg=Purple}
+\setbeamercolor{alerted text}{fg=Red}
+\setbeamercolor{footline}{fg=White}
+
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{--}
+\setbeamertemplate{itemize subsubitem}{\textbullet}
+\setlength{\leftmargini}{1.25em}
+\setlength{\leftmarginii}{1em}
+\setlength{\leftmarginiii}{1em}
+
+% \pgfdeclareimage[width=1.01\paperwidth]{blueslope}{blueslope}
+\pgfdeclareimage[width=1.01\paperwidth]{logo}{logos/northwestern_logo_wide}
+
+\setbeamertemplate{background}{%
+\begin{tikzpicture}[overlay,remember picture]
+\node[anchor=south east,inner sep=0pt,draw=none,xshift=0.01\paperheight,yshift=-0.002\paperheight] at (current page.south east) {\pgfuseimage{logo}};
+\end{tikzpicture}%
+}
+
+\setbeamertemplate{footline}{%
+%    \begin{tikzpicture}[remember picture, overlay]
+%        \node[xshift=-0.95\paperwidth,yshift=0.06\paperheight] at (current page.south east) {\tiny\insertframenumber/\inserttotalframenumber};
+%    \end{tikzpicture}
+\vskip 0.125\paperheight
+}
+
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\tableheadrow}{\rowcolor{Purple}}
+\newcommand{\tableheadcol}[1]{{\bfseries\color{white}#1}}
+%\rowcolors{2}{Grey1}{Grey2}%
+\AtBeginEnvironment{tabular}{\color{DarkGrey}}
+
